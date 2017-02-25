@@ -33,5 +33,5 @@ curl localhost:8080/donors/0/0/0/tile.pbf > tile.pbf
 
 Use `parse-pbf.js` to see the contents of the `tile.pbf`:
 ```
-parse-pbf.js
+node parse-tile-pbf.js
 ```
