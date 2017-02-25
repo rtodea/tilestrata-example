@@ -43,6 +43,14 @@ function run() {
 
     const app = express();
 
+    app.get('/index.html', (_, res) => {
+      res.sendFile('index.html', {
+        root: process.cwd()
+      });
+    });
+
+    app.use('/static', express.static('assets'));
+
     app.get('/map', (_, res) => {
       res.sendFile('mapbox-style.json', {
         root: process.cwd()

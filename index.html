@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"
+  />
+  <meta name="description" content="[Vector tiles - 4.2]">
+  <!--
+  ArcGIS API for JavaScript, https://js.arcgis.com
+  For more information about the layers-vectortilelayer sample, read the original sample description at developers.arcgis.com.
+  https://developers.arcgis.com/javascript/latest/layers-vectortilelayer/index.html
+  -->
+  <title>Vector tiles - 4.2</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.2/"></script>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/VectorTileLayer",
+      "dojo/domReady!"
+    ], function(Map, MapView, VectorTileLayer) {
+
+      // Create a Map
+      var map = new Map({basemap: 'streets'});
+
+      // Make map view and bind it to the map
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        zoom: 1,
+      });
+
+      /********************************************************************
+       * Add a tile layer to the map
+       *
+       * The url property must either point to the style as
+       * demonstrated below or to the URL of a Vector Tile service
+       * such as:
+       * https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer
+       *********************************************************************/
+      var tileLyr = new VectorTileLayer({
+        url: "/map"
+      });
+      map.add(tileLyr);
+    });
+  </script>
+</head>
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>

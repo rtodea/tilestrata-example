@@ -3,12 +3,12 @@
   "name": "Basic",
   "sources": {
     "donors_ts": {
-      "tiles": ["http://localhost:8080/donors/{z}/{x}/{y}/tile.pbf"],
+      "tiles": ["http://localhost:8080/map/donors/{z}/{x}/{y}/tile.pbf"],
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/sprites/basic-v9",
-  "glyphs": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/glyphs/{fontstack}/{range}.pbf",
+  "sprite": "http://localhost:8080/static/sprites/basic-v9",
+  "glyphs": "http://localhost:8080/static/glyphs/{fontstack}/{range}.pbf",
   "metadata": {
     "mapbox:autocomposite": true,
     "mapbox:type": "template"
@@ -16,9 +16,9 @@
   "layers": [
     {
       "interactive": true,
-      "minzoom": 5,
+      "minzoom": 1,
       "layout": {
-        "icon-image": "{maki}-11",
+        "icon-image": "hospital-11",
         "text-offset": [
           0,
           0.5
@@ -41,7 +41,7 @@
         "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-blur": 1
       },
-      "source-layer": "donors"
+      "source-layer": "layer"
     }
   ]
 }
