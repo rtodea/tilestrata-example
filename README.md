@@ -19,3 +19,19 @@ Install npm dependencies:
 ```
 yarn install
 ```
+
+## Starting
+
+```
+yarn run start
+```
+
+Test the tile server with curl:
+```
+curl localhost:8080/donors/0/0/0/tile.pbf > tile.pbf
+```
+
+Use `parse-pbf.js` to see the contents of the `tile.pbf`:
+```
+parse-pbf.js
+```

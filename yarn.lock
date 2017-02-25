@@ -6,6 +6,14 @@ abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
 
+active-cache@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/active-cache/-/active-cache-0.1.0.tgz#c5da0fec521c81505d0c6537c93e518ad6f85989"
+  dependencies:
+    async-cache "^1.0.0"
+    extend "^3.0.0"
+    lru-cache "^2.6.5"
+
 agentkeepalive@~2.0.2:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/agentkeepalive/-/agentkeepalive-2.0.5.tgz#42834ae8835dff9c7ffcaed53f5666bf817aa279"
@@ -52,9 +60,19 @@ assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
 
+async-cache@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/async-cache/-/async-cache-1.1.0.tgz#4a9a5a89d065ec5d8e5254bd9ee96ba76c532b5a"
+  dependencies:
+    lru-cache "^4.0.0"
+
 async@1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.4.2.tgz#6c9edcb11ced4f0dd2f2d40db0d49a109c088aab"
+
+async@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -223,7 +241,7 @@ eventemitter3@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.1.1.tgz#47786bdaa087caf7b1b75e73abc5c7d540158cd0"
 
-extend@~3.0.0:
+extend@^3.0.0, extend@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.0.tgz#5a474353b9f3353ddd8176dfd37b91c83a46f1d4"
 
@@ -300,6 +318,10 @@ generate-object-property@^1.1.0:
   resolved "https://registry.yarnpkg.com/generate-object-property/-/generate-object-property-1.2.0.tgz#9c0e1c40308ce804f4783618b937fa88f99d50d0"
   dependencies:
     is-property "^1.0.0"
+
+generic-pool@~2.2.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/generic-pool/-/generic-pool-2.2.2.tgz#7a89f491d575b42f9f069a0e8e2c6dbaa3c241be"
 
 geojson-mapnikify@^0.7.2:
   version "0.7.2"
@@ -403,6 +425,10 @@ humanize-duration@3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.3.0.tgz#d6b7ccdbf50ae675cd2250c9742535aebbc7348d"
 
+ieee754@^1.1.6:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
@@ -491,13 +517,24 @@ lodash.padstart@^4.1.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.padstart/-/lodash.padstart-4.6.1.tgz#d2e3eebff0d9d39ad50f5cbd1b52a7bce6bb611b"
 
-lodash@3.10.1:
+lodash@3.10.1, lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lru-cache@2:
+lodash@~4.11.2:
+  version "4.11.2"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.11.2.tgz#d6b4338b110a58e21dae5cebcfdbbfd2bc4cdb3b"
+
+lru-cache@2, lru-cache@^2.6.5:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
+
+lru-cache@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
+  dependencies:
+    pseudomap "^1.0.1"
+    yallist "^2.0.0"
 
 maki@0.5.0:
   version "0.5.0"
@@ -511,6 +548,13 @@ makizushi@~1.4.0:
     err-code "0.1.2"
     maki "0.5.0"
     mapnik "~3.5.0"
+    xtend "~3.0.0"
+
+mapnik-pool@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/mapnik-pool/-/mapnik-pool-0.1.2.tgz#5523fbe8157d280cc0bbadafb13cea2656e426ca"
+  dependencies:
+    generic-pool "~2.2.1"
     xtend "~3.0.0"
 
 mapnik-vector-tile@~1.2.2:
@@ -653,6 +697,13 @@ path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
 
+pbf@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/pbf/-/pbf-3.0.5.tgz#24f0fa2cbeb16e5c56a5901bb7e9c2ac0c8059be"
+  dependencies:
+    ieee754 "^1.1.6"
+    resolve-protobuf-schema "^2.0.0"
+
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -663,13 +714,25 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+point-geometry@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/point-geometry/-/point-geometry-0.0.0.tgz#6fcbcad7a803b6418247dd6e49c2853c584daff7"
+
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
 
+protocol-buffers-schema@^2.0.2:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/protocol-buffers-schema/-/protocol-buffers-schema-2.2.0.tgz#d29c6cd73fb655978fb6989691180db844119f61"
+
 protozero@~1.4.2:
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/protozero/-/protozero-1.4.5.tgz#80eaa80a4f9c751465c4cb2620d8233b50ec1aff"
+
+pseudomap@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
 punycode@^1.4.1:
   version "1.4.1"
@@ -726,7 +789,32 @@ recovery@^0.2.6:
     one-time "0.0.x"
     tick-tock "1.0.x"
 
-request@^2.64.0, request@^2.79.0:
+request@^2.64.0, request@~2.78.0:
+  version "2.78.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
+  dependencies:
+    aws-sign2 "~0.6.0"
+    aws4 "^1.2.1"
+    caseless "~0.11.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.0"
+    forever-agent "~0.6.1"
+    form-data "~2.1.1"
+    har-validator "~2.0.6"
+    hawk "~3.1.3"
+    http-signature "~1.1.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.7"
+    node-uuid "~1.4.7"
+    oauth-sign "~0.8.1"
+    qs "~6.3.0"
+    stringstream "~0.0.4"
+    tough-cookie "~2.3.0"
+    tunnel-agent "~0.4.1"
+
+request@^2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -751,30 +839,11 @@ request@^2.64.0, request@^2.79.0:
     tunnel-agent "~0.4.1"
     uuid "^3.0.0"
 
-request@~2.78.0:
-  version "2.78.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
+resolve-protobuf-schema@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-protobuf-schema/-/resolve-protobuf-schema-2.0.0.tgz#e67b062a67f02d11bd6886e70efda788407e0fb4"
   dependencies:
-    aws-sign2 "~0.6.0"
-    aws4 "^1.2.1"
-    caseless "~0.11.0"
-    combined-stream "~1.0.5"
-    extend "~3.0.0"
-    forever-agent "~0.6.1"
-    form-data "~2.1.1"
-    har-validator "~2.0.6"
-    hawk "~3.1.3"
-    http-signature "~1.1.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.7"
-    node-uuid "~1.4.7"
-    oauth-sign "~0.8.1"
-    qs "~6.3.0"
-    stringstream "~0.0.4"
-    tough-cookie "~2.3.0"
-    tunnel-agent "~0.4.1"
+    protocol-buffers-schema "^2.0.2"
 
 resumer@~0.0.0:
   version "0.0.0"
@@ -809,6 +878,10 @@ sntp@1.x.x:
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
   dependencies:
     hoek "2.x.x"
+
+sphericalmercator@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/sphericalmercator/-/sphericalmercator-1.0.4.tgz#baad4e34187f06e87f2e92fc1280199fa1b01d4e"
 
 sshpk@^1.7.0:
   version "1.10.2"
@@ -903,6 +976,28 @@ tilebelt@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tilebelt/-/tilebelt-1.0.1.tgz#3bbf7113b3fec468efb0d9148f4bb71ef126a21a"
 
+tilestrata-dependency@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/tilestrata-dependency/-/tilestrata-dependency-0.5.0.tgz#ec8cd1ab0f8ff4c70a37a2311e9fe66205288e71"
+
+tilestrata-vtile-raster@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/tilestrata-vtile-raster/-/tilestrata-vtile-raster-0.5.0.tgz#f02e00ebbae5d9c5175d2bee250a6408e2a2efb3"
+  dependencies:
+    active-cache "^0.1.0"
+    async "^1.5.2"
+    lodash "~4.11.2"
+    tilestrata-dependency "~0.5.0"
+
+tilestrata-vtile@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/tilestrata-vtile/-/tilestrata-vtile-0.5.3.tgz#5a8b8b4e431e35e82ea3238bccfcedf81bc0a6a7"
+  dependencies:
+    active-cache "^0.1.0"
+    lodash "^3.10.1"
+    mapnik-pool "0.1.2"
+    sphericalmercator "1.0.4"
+
 tilestrata@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/tilestrata/-/tilestrata-2.0.4.tgz#a961e74dc474dcb8b13180da2df4cf14d519d921"
@@ -948,6 +1043,12 @@ uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
+vector-tile@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/vector-tile/-/vector-tile-1.3.0.tgz#06d516a83b063f04c82ef539cf1bb1aebeb696b4"
+  dependencies:
+    point-geometry "0.0.0"
+
 verror@1.3.6:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/verror/-/verror-1.3.6.tgz#cff5df12946d297d2baaefaa2689e25be01c005c"
@@ -971,3 +1072,7 @@ xtend@^4.0.0, xtend@~4.0.0:
 xtend@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-3.0.0.tgz#5cce7407baf642cba7becda568111c493f59665a"
+
+yallist@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.0.0.tgz#306c543835f09ee1a4cb23b7bce9ab341c91cdd4"
