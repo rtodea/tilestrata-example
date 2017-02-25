@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "Basic",
+  "sources": {
+    "donors_ts": {
+      "tiles": ["http://localhost:8080/donors/{z}/{x}/{y}/tile.pbf"],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/sprites/basic-v9",
+  "glyphs": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/glyphs/{fontstack}/{range}.pbf",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "template"
+  },
+  "layers": [
+    {
+      "interactive": true,
+      "minzoom": 5,
+      "layout": {
+        "icon-image": "{maki}-11",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "text-field": "{name_en}",
+        "text-font": [
+          "Open Sans Semibold"
+        ],
+        "text-max-width": 8,
+        "text-anchor": "top",
+        "text-size": 11,
+        "icon-size": 1
+      },
+      "type": "symbol",
+      "source": "donors_ts",
+      "id": "donors",
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,0.75)",
+        "text-halo-blur": 1
+      },
+      "source-layer": "donors"
+    }
+  ]
+}

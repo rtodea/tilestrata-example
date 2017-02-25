@@ -1,8 +1,8 @@
+const express = require('express');
 const fs = require('fs');
 const geojsonToXml = require('geojson-mapnikify');
 const tilestrata = require('tilestrata');
 const vtile = require('tilestrata-vtile');
-const vtileRaster = require('tilestrata-vtile-raster');
 
 const XML_PATH = 'donors.xml';
 
@@ -37,13 +37,27 @@ function run() {
 
   const donorsGeoJson = dumpDbIntoGeoJson();
   geojsonToXml(donorsGeoJson, true, (err, xml) => {
-    console.debug(xml);
+    console.log(xml);
     fs.writeFileSync(XML_PATH, xml);
     setup(strata);
-    strata.listen(8080, () => {
-      console.log('Tiles URL Template: donors/{zoom}/{x}/{y}/tile.pbf');
-      console.log('Listening on 8080...');
+
+    const app = express();
+
+    app.get('/map', (_, res) => {
+      res.sendFile('mapbox-style.json', {
+        root: process.cwd()
+      });
     });
+
+    app.use(tilestrata.middleware({
+      server: strata,
+      prefix: '/map'
+    }));
+
+    app.listen(8080, () => {
+        console.log('Tiles URL Template: map/donors/{zoom}/{x}/{y}/tile.pbf');
+        console.log('Listening on 8080...');
+    })
   });
 }
 

@@ -9,6 +9,7 @@
   "author": "rtodea",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.14.1",
     "geojson-mapnikify": "^0.7.2",
     "pbf": "^3.0.5",
     "tilestrata": "^2.0.4",
