@@ -1,0 +1,87 @@
+{
+  "features": [
+    {
+      "properties": {
+        "id": "58af3f5996ac90570d589ffd",
+        "city": "Timișoara",
+        "firstName": "Robert",
+        "lastName": "Todea",
+        "contactNo": "+40721041500",
+        "email": "robert.t@gmail.com",
+        "bloodGroup": "O+",
+        "ip": "",
+        "countryCode": "ROU",
+        "street": "Intrarea Crângului 1"
+      },
+      "geometry": {
+        "coordinates": [
+          21.239196777343622,
+          45.73755068886681
+        ],
+        "type": "Point"
+      },
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "id": "58af3f5996ac90570d589ffd",
+        "city": "Arad",
+        "firstName": "Tomas",
+        "lastName": "Todea",
+        "contactNo": "+40721041500",
+        "email": "tomas.t@gmail.com",
+        "bloodGroup": "O+",
+        "ip": "",
+        "countryCode": "ROU",
+        "street": "Intrarea Crângului 1"
+      },
+      "geometry": {
+        "coordinates": [
+          21.308037,
+          46.182683
+        ],
+        "type": "Point"
+      },
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "id": "58af566d96ac90570d589ffe",
+        "ip": "",
+        "bloodGroup": "B−",
+        "email": "john.doe@gmai.com",
+        "contactNo": "+40729685300",
+        "lastName": "Doe",
+        "firstName": "John"
+      },
+      "geometry": {
+        "coordinates": [
+          23.362304687499265,
+          46.2982951579247
+        ],
+        "type": "Point"
+      },
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "id": "58af568a96ac90570d589fff",
+        "ip": "",
+        "bloodGroup": "B+",
+        "email": "jane.doe@gmail.com",
+        "contactNo": "+40729675300",
+        "lastName": "Doe",
+        "firstName": "Jane"
+      },
+      "geometry": {
+        "coordinates": [
+          1.741210937505012,
+          29.588649772988212
+        ],
+        "type": "Point"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}
