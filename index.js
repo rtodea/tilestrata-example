@@ -49,6 +49,12 @@ function run() {
       });
     });
 
+    app.get('/app.js', (_, res) => {
+      res.sendFile('app.js', {
+        root: process.cwd()
+      });
+    });
+
     app.use('/static', express.static('assets'));
 
     app.get('/map', (_, res) => {
